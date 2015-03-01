@@ -4,7 +4,7 @@ BIN=$(PWD)/bin
 SRC=$(PWD)/src
 HEADERS=$(PWD)/headers
 CC=gcc
-CFLAGS=-c -I$(HEADERS)/
+CFLAGS=-g -c -I$(HEADERS)/
 
 all: func_driver func_stack
 	$(CC) $(OBJ)/func_driver.o $(OBJ)/func_stack.o -o $(BIN)/func_out

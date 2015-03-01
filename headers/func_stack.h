@@ -9,8 +9,8 @@ typedef struct _func_stack {
 } glm_func_stack;
 
 
-void push_func( glm_func_stack *func_stack, float (*func)(float,float) );
+void push_func( glm_func_stack **func_stack, float (*func)(float,float) );
 float (*top_func( glm_func_stack *func_stack ))(float,float);
-float (*pop_func( glm_func_stack *func_stack ))(float a,float b);
+float (*pop_func( glm_func_stack **func_stack ))(float,float);
 
 #endif
