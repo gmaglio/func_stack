@@ -22,6 +22,10 @@ int main() {
     push_func( &func_stack_a, &payload_1 );
     push_func( &func_stack_a, &payload_2 );
     push_func( &func_stack_a, &payload_1 );
+    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
+    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
+    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
+    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
     printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));
     printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));
     printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));

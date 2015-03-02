@@ -13,11 +13,9 @@ float (*top_func( glm_func_stack *func_stack ))(float,float) {
 }
 
 float (*pop_func( glm_func_stack **func_stack ))(float,float) {
+    float (*local_func)(float,float) = (*func_stack)->func;
     glm_func_stack *old_top = *func_stack;
-    float local_func(float a,float b) { return -1; }
-    if( *func_stack == NULL ) 
-        return &local_func;
-    else
-        *func_stack = (*func_stack)->next;
-    return (*func_stack)->func;
+    *func_stack = (*func_stack)->next;
+    free(old_top);
+    return local_func;
 }
