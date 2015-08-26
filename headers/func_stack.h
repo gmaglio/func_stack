@@ -12,5 +12,6 @@ typedef struct _func_stack {
 void push_func( glm_func_stack **func_stack, float (*func)(float,float) );
 float (*top_func( glm_func_stack *func_stack ))(float,float);
 float (*pop_func( glm_func_stack **func_stack ))(float,float);
+float null_func(float,float); // null function to support bottom of stack
 
 #endif

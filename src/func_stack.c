@@ -23,8 +23,7 @@ float (*pop_func( glm_func_stack **func_stack ))(float,float) {
     glm_func_stack *old_top = *func_stack;
     if( (*func_stack) == NULL ) {
 	printf("At bottom of stack\n");
-	local_func = &null_func;
-	return local_func;
+	return &null_func;
     }
     else {
         local_func = (*func_stack)->func;
