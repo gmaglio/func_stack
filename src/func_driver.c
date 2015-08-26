@@ -16,20 +16,16 @@ float payload_2(float x, float y) {
 
 int main() {
     
-    glm_func_stack *func_stack_a = malloc(sizeof(glm_func_stack));
-    func_stack_a->next = NULL;
+    glm_func_stack *func_stack_a = NULL;
     push_func( &func_stack_a, &payload_0 );
     push_func( &func_stack_a, &payload_1 );
     push_func( &func_stack_a, &payload_2 );
-    push_func( &func_stack_a, &payload_1 );
-    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
-    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
-    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
-    printf("top: %f\n", top_func( func_stack_a )(8.0,7.0));
     printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));
     printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));
     printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));
-    printf("pop: %f\n", pop_func( &func_stack_a )(8.0,7.0));
+    printf("pop: %f\n", pop_func( &func_stack_a )(10.0,7.0));
+    printf("pop: %f\n", pop_func( &func_stack_a )(24.0,7.0));
+    printf("pop: %f\n", pop_func( &func_stack_a )(16.0,7.0));
 
     return 0;
 
